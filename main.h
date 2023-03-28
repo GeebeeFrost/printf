@@ -16,8 +16,11 @@ typedef struct specifier
 
 int _printf(const char *, ...);
 int _putchar(char);
-int (*choose_function(const char))(va_list);
+int (*choose_function(const char format))(va_list);
 int print_c(va_list);
 int print_s(va_list);
+int print_int(va_list ap);
+void print_number(int n);
+int count_digits(int n);
 
 #endif
