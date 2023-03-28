@@ -1,8 +1,2 @@
-Repo created for ALX printf group project.
-Team members:
-Shvayne
-GeebeeFrost
-(Testing)
-1
-2
-3
+Our own printf function.
+Created for ALX (Cohort 12) group project.
