@@ -15,8 +15,6 @@ int (*choose_function(const char format))(va_list)
 	spec_t options[] = {
 		{'c', print_c},
 		{'s', print_s},
-		{'d', print_d},
-		{'i', print_i},
 		{'\0', NULL}
 	};
 
