@@ -27,7 +27,7 @@ int print_s(va_list ap)
 	char *str = va_arg(ap, char *);
 
 	if (str == NULL)
-		return (0);
+		str = "(null)";
 	for (count = 0; str[count] != '\0'; count++)
 		_putchar(str[count]);
 	return (count);
