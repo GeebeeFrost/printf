@@ -7,15 +7,15 @@
  */
 int count_digits(int n)
 {
-	unsigned int num, d = 0;
+	unsigned int number, d = 0;
 
 	if (n < 0)
-		num = n * -1;
+		number = n * -1;
 	else
-		num = n;
-	while (num != 0)
+		number = n;
+	while (number != 0)
 	{
-		num = num / 10;
+		number = number / 10;
 		d++;
 	}
 	return (d);
