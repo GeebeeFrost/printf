@@ -3,6 +3,8 @@
 /**
  * print_int - prints integer
  * @ap: parameter
+ *
+ * Return: Number of digits printed
  */
 int print_int(va_list ap)
 {
