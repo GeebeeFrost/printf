@@ -8,14 +8,14 @@
  */
 int print_int(va_list ap)
 {
-	int count;
+	int num_count;
 	int n = va_arg(ap, int);
 
-	count = count_digits(n);
+	num_count = count_digits(n);
 	if (n <= 0)
-		count++;
+		num_count++;
 	print_number(n);
-	return (count);
+	return (num_count);
 }
 
 /**
