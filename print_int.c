@@ -24,20 +24,20 @@ int print_int(va_list ap)
  */
 void print_number(int n)
 {
-	unsigned int n1 = 0;
+	unsigned int m = 0;
 
 	if (n < 0)
 	{
-		n1 = n * -1;
+		m = n * -1;
 		_putchar('-');
 	}
 	else
 	{
-		n1 = n;
+		m = n;
 	}
-	if (n1 / 10)
+	if (m / 10)
 	{
-		print_number(n1 / 10);
+		print_number(m / 10);
 	}
-	_putchar((n1 % 10) + '0');
+	_putchar((m % 10) + '0');
 }
