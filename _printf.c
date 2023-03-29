@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list ap;
+	va_list arg;
 	unsigned int count = 0;
 	int (*f)(va_list);
 	const char *cp;
@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		return (-1);
 	}
-	va_start(ap, format);
+	va_start(arg, format);
 	for (cp = format; *cp != '\0'; cp++)
 	{
 		if (*cp == '%')
@@ -30,13 +30,13 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			f = choose_function(*cp);
-			count += (f) ? f(ap) : _printf("%%%c", *cp);
+			count += (f) ? f(arg) : _printf("%%%c", *cp);
 		}
 		else
 		{
 			count += _putchar(*cp);
 		}
 	}
-	va_end(ap);
+	va_end(arg);
 	return (count);
 }
