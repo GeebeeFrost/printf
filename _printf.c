@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	va_list arg;
-	unsigned int count = 0;
+	unsigned int num_count = 0;
 	int (*f)(va_list);
 	const char *cp;
 
@@ -26,17 +26,17 @@ int _printf(const char *format, ...)
 			cp++;
 			if (*cp == '%')
 			{
-				count += _putchar('%');
+				num_count += _putchar('%');
 				continue;
 			}
 			f = choose_function(*cp);
-			count += (f) ? f(arg) : _printf("%%%c", *cp);
+			num_count += (f) ? f(arg) : _printf("%%%c", *cp);
 		}
 		else
 		{
-			count += _putchar(*cp);
+			num_count += _putchar(*cp);
 		}
 	}
 	va_end(arg);
-	return (count);
+	return (num_count);
 }
