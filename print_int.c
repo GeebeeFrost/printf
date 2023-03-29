@@ -12,6 +12,8 @@ int print_int(va_list ap)
 	int n = va_arg(ap, int);
 
 	count = count_digits(n);
+	if (n <= 0)
+		count++;
 	print_number(n);
 	return (count);
 }

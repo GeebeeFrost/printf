@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			f = choose_function(*cp);
-			count += f(ap);
+			count += (f) ? f(ap) : _printf("%%%c", *cp);
 		}
 		else
 		{
