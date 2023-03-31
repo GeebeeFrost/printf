@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
  * print_int - prints integer
  * @ap: parameter
@@ -16,6 +16,21 @@ int print_int(va_list ap)
 		num_count++;
 	print_number(n);
 	return (num_count);
+}
+
+/**
+ * print_unsigned - Prints unsigned integer
+ * when specifier is u
+ * @ap: Variable argument
+ *
+ * Return: Number of digits printed
+ */
+int print_unsigned(va_list ap)
+{
+	unsigned int num = va_arg(ap, unsigned int);
+	char *result = convert_number(num, 10, 0);
+
+	return (_puts(result));
 }
 
 /**
