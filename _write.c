@@ -9,7 +9,7 @@
  */
 int _putchar(char c)
 {
-	static char buffer[BUFSIZ];
+	static char buffer[1024];
 	static int i;
 
 	if (c != -1)
@@ -17,7 +17,7 @@ int _putchar(char c)
 		buffer[i] = c;
 		i++;
 	}
-	if (c == -1 || i >= BUFSIZ)
+	if (c == -1 || i >= 1024)
 	{
 		write(1, &buffer, i);
 		i = 0;
