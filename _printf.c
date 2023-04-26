@@ -39,6 +39,7 @@ int _printf(const char *format, ...)
 			char_count += _putchar(*cp);
 		}
 	}
+	_putchar(-1);
 	va_end(arg);
 	return (char_count);
 }

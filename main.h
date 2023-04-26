@@ -2,6 +2,10 @@
 #define MAIN
 
 #include <stdarg.h>
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct specifier - Struct to map specifier to function

@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
  * _putchar - writes the character c to stdout
@@ -9,7 +9,20 @@
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	static char buffer[BUFSIZ];
+	static int i;
+
+	if (c != -1)
+	{
+		buffer[i] = c;
+		i++;
+	}
+	if (c == -1 || i >= BUFSIZ)
+	{
+		write(1, &buffer, i);
+		i = 0;
+	}	
+	return (1);
 }
 
 /**
