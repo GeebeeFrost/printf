@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_int - prints integer
+ * print_int - Prints integer when specifier is i
  * @ap: parameter
  *
  * Return: Number of digits printed
@@ -34,8 +34,8 @@ int print_unsigned(va_list ap)
 }
 
 /**
- * print_number - prints a number
- * @n: number count
+ * print_number - Prints a number
+ * @n: Number
  */
 void print_number(int n)
 {
@@ -55,4 +55,25 @@ void print_number(int n)
 		print_number(m / 10);
 	}
 	_putchar((m % 10) + '0');
+}
+
+/**
+ * count_digits - Counts the number of digits in a number
+ * @n: Number
+ * Return: Number of digits
+ */
+int count_digits(int n)
+{
+	unsigned int number, d = 0;
+
+	if (n < 0)
+		number = n * -1;
+	else
+		number = n;
+	while (number != 0)
+	{
+		number = number / 10;
+		d++;
+	}
+	return (d);
 }

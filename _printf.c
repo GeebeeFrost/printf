@@ -1,11 +1,9 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 
 /**
- * _printf - an implementation of the standard printf function
- * @format: a character string
- * Return: count
+ * _printf - Mimics the printf function
+ * @format: Format string of what is to be printed
+ * Return: Number of characters printed
  */
 int _printf(const char *format, ...)
 {
